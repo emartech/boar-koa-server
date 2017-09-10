@@ -4,13 +4,13 @@
 
 put these lines in your server.js
 ``` javascript
-  let koa = require('koa');
-  let path = require('path');
-  let koaApp = module.exports = koa();
-  let config = require('./config');
-  let App = require('boar-server').app;
+  const koa = require('koa');
+  const path = require('path');
+  const koaApp = module.exports = koa();
+  const config = require('./config');
+  const App = require('boar-server').app;
 
-  let app = new App(koaApp);
+  const app = new App(koaApp);
   app.loadControllers(path.join(config.root, 'controllers'));
 
   if (!module.parent) { app.listen(config.port); }
@@ -18,8 +18,8 @@ put these lines in your server.js
 
 ## Add middleware for your app
 ``` javascript
-  let cors = require('koa-cors');
-  let app = new App(koaApp);
+  const cors = require('koa-cors');
+  const app = new App(koaApp);
   app.addMiddleware(cors());
 ```
 
@@ -73,7 +73,7 @@ put these lines in your server.js
 If your application is running behind reverse proxy (like Heroku) you should set the trustProxy configuration option to *true* in order to process the x-forwarded-proto header.
 
 ``` javascript
-  let app = new App(koaApp);
+  const app = new App(koaApp);
   app.addEnforceSSLMiddleware({ trustProxy: true });
 ```
 

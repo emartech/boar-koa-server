@@ -1,0 +1,22 @@
+{
+  "root": true,
+  "extends": [
+    "emarsys"
+  ],
+  "env": {
+    "node": true,
+    "mocha": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
+  "globals": {
+    "expect": true,
+    "sinon": true
+  },
+  "rules": {
+    "no-unused-expressions": 0,
+    "security/detect-non-literal-require": 0,
+    "security/detect-non-literal-fs-filename": 0
+  }
+}

@@ -1,11 +1,12 @@
 {
-  "name": "boar-koa-server",
+  "name": "@emartech/boar-koa-server",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./lib --recursive && nsp check",
-    "prepublish": "npm test",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "code-style": "eslint '**/*.js'",
+    "test-run": "mocha ./lib --recursive",
+    "test": "npm run test-run && nsp check && npm run code-style",
+    "semantic-release": "CI=true semantic-release pre && npm publish --access public && semantic-release post"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,8 @@
   "homepage": "https://github.com/emartech/boar-koa-server",
   "dependencies": {
     "app-root-path": "1.3.0",
+    "eslint": "4.6.1",
+    "eslint-config-emarsys": "4.0.0",
     "kcors": "2.2.1",
     "koa-bodyparser": "4.2.0",
     "koa-helmet": "3.1.0",

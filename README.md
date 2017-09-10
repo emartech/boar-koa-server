@@ -8,7 +8,7 @@ put these lines in your server.js
   const path = require('path');
   const koaApp = module.exports = koa();
   const config = require('./config');
-  const App = require('boar-server').app;
+  const App = require('@emartech/boar-koa-server').app;
 
   const app = new App(koaApp);
   app.loadControllers(path.join(config.root, 'controllers'));
@@ -123,7 +123,7 @@ Provides middlewares for setting up various security related HTTP headers.
 
 ### ControllerFactory
 ``` javascript
-  var ControllerFactory = require('boar-server').lib.controllerFactory;
+  var ControllerFactory = require('@emartech/boar-koa-server').lib.controllerFactory;
 
   module.exports = ControllerFactory.create(function(router) {
     router.get('/', ControllerFactory.load('main/actions/get'));

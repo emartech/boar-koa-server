@@ -4,9 +4,9 @@
 
 put these lines in your server.js
 ``` javascript
-  const koa = require('koa');
+  const Koa = require('koa');
   const path = require('path');
-  const koaApp = module.exports = koa();
+  const koaApp = module.exports = new Koa();
   const config = require('./config');
   const App = require('@emartech/boar-koa-server').app;
 

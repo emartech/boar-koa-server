@@ -1,22 +1,6 @@
 # Boar Koa Server
 
-## Example usage for a Koa 1.x app
-
-put these lines in your server.js
-``` javascript
-  const koa = require('koa');
-  const path = require('path');
-  const koaApp = module.exports = koa();
-  const config = require('./config');
-  const App = require('@emartech/boar-koa-server').app;
-
-  const app = new App(koaApp);
-  app.loadControllers(path.join(config.root, 'controllers'));
-
-  if (!module.parent) { app.listen(config.port); }
-```
-
-## Example usage for a Koa 2.x app
+## Example usage for app
 
 put these lines in your server.js
 ``` javascript

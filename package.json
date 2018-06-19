@@ -6,16 +6,11 @@
     "code-style": "eslint '**/*.js'",
     "test-run": "mocha ./lib --recursive",
     "test": "npm run test-run && nsp check && npm run code-style",
-    "semantic-release": "CI=true semantic-release pre && npm publish --access public && semantic-release post"
+    "semantic-release": "CI=true semantic-release"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/emartech/boar-koa-server.git"
-  },
-  "release": {
-    "verifyConditions": {
-      "path": "./node_modules/semantic-release/src/lib/plugin-noop.js"
-    }
   },
   "engines": {
     "node": "8"

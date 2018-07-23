@@ -16,7 +16,7 @@
     "node": "8"
   },
   "author": "Emarsys",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/emartech/boar-koa-server/issues"
   },

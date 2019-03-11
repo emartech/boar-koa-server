@@ -89,6 +89,7 @@ Provides middlewares for setting up various security related HTTP headers.
 | ↳hsts | `Object` | [More info.](https://github.com/helmetjs/hsts) Learn more: [OWASP HSTS page](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security) |
 | ↳useXssFilter | `Boolean` | If `true`, [x-xss-protection](https://github.com/helmetjs/x-xss-protection) middleware will be included. Default: `true` |
 | ↳useNoSniff | `Boolean` |  If `true`, [dont-sniff-mimetype](https://github.com/helmetjs/dont-sniff-mimetype) middleware will be included. Default: `true` |
+| ↳referrerPolicy| `Boolean,Object` | If`{ policy: 'same-origin'}`, [referrer-policy](https://github.com/helmetjs/referrer-policy) middleware will be included. Default `false` |
 
 ``` javascript
   app.addSecurityMiddlewares(options);
@@ -114,7 +115,8 @@ Provides middlewares for setting up various security related HTTP headers.
       preload: false
     },
     useXssFilter: true,
-    useNoSniff: true
+    useNoSniff: true,
+    referrerPolicy: false
   }
 ```
 

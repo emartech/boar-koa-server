@@ -5,7 +5,7 @@
   "scripts": {
     "code-style": "eslint '**/*.js'",
     "test-run": "mocha ./lib --recursive",
-    "test": "npm run test-run && nsp check && npm run code-style",
+    "test": "npm run test-run && npm audit && npm run code-style",
     "semantic-release": "CI=true semantic-release"
   },
   "repository": {
@@ -13,7 +13,7 @@
     "url": "git+https://github.com/emartech/boar-koa-server.git"
   },
   "engines": {
-    "node": "8"
+    "node": "10"
   },
   "author": "Emarsys",
   "license": "MIT",
@@ -37,7 +37,6 @@
     "eslint": "4.19.1",
     "eslint-config-emarsys": "5.1.0",
     "mocha": "5.2.0",
-    "nsp": "3.2.1",
     "semantic-release": "15.5.5",
     "sinon": "6.0.0"
   }

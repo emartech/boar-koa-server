@@ -1,0 +1,8 @@
+{
+  "exceptions": [
+    "https://npmjs.com/advisories/755",
+    "https://npmjs.com/advisories/803",
+    "https://npmjs.com/advisories/812",
+    "https://npmjs.com/advisories/813"
+  ]
+}

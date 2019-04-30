@@ -5,7 +5,8 @@
   "scripts": {
     "code-style": "eslint '**/*.js'",
     "test-run": "mocha ./lib --recursive",
-    "test": "npm run test-run && npm audit && npm run code-style",
+    "audit": "npm audit --json | audit-filter",
+    "test": "npm run test-run && npm run audit && npm run code-style",
     "semantic-release": "CI=true semantic-release"
   },
   "repository": {
@@ -22,22 +23,23 @@
   },
   "homepage": "https://github.com/emartech/boar-koa-server",
   "dependencies": {
-    "app-root-path": "2.0.1",
+    "app-root-path": "2.2.1",
     "deep-extend": "0.6.0",
-    "kcors": "2.2.1",
+    "kcors": "2.2.2",
     "koa-bodyparser": "4.2.1",
-    "koa-helmet": "4.0.0",
+    "koa-helmet": "4.1.0",
     "koa-methodoverride": "2.0.0",
     "koa-requestid": "2.0.1",
     "koa-router": "7.4.0",
-    "koa-ssl": "2.0.0"
+    "koa-ssl": "2.0.1"
   },
   "devDependencies": {
-    "chai": "4.1.2",
-    "eslint": "4.19.1",
+    "audit-filter": "0.4.3",
+    "chai": "4.2.0",
+    "eslint": "5.16.0",
     "eslint-config-emarsys": "5.1.0",
-    "mocha": "5.2.0",
+    "mocha": "6.1.4",
     "semantic-release": "15.13.3",
-    "sinon": "6.0.0"
+    "sinon": "7.3.2"
   }
 }

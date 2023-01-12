@@ -1,5 +1,6 @@
 {
   "name": "@emartech/boar-koa-server",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -13,9 +14,6 @@
     "type": "git",
     "url": "git+https://github.com/emartech/boar-koa-server.git"
   },
-  "engines": {
-    "node": "10"
-  },
   "author": "Emarsys",
   "license": "MIT",
   "bugs": {
@@ -23,22 +21,22 @@
   },
   "homepage": "https://github.com/emartech/boar-koa-server",
   "dependencies": {
-    "app-root-path": "3.0.0",
+    "app-root-path": "3.1.0",
     "deep-extend": "0.6.0",
     "kcors": "2.2.2",
     "koa-bodyparser": "4.3.0",
     "koa-helmet": "6.1.0",
     "koa-methodoverride": "2.0.0",
     "koa-requestid": "2.1.0",
-    "koa-router": "10.0.0",
+    "koa-router": "12.0.0",
     "koa-ssl": "2.0.1"
   },
   "devDependencies": {
-    "chai": "4.3.4",
-    "eslint": "7.26.0",
+    "chai": "4.3.7",
+    "eslint": "8.31.0",
     "eslint-config-emarsys": "5.1.0",
-    "mocha": "8.4.0",
-    "semantic-release": "17.4.3",
-    "sinon": "10.0.0"
+    "mocha": "10.2.0",
+    "semantic-release": "20.0.2",
+    "sinon": "15.0.1"
   }
 }

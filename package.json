@@ -5,6 +5,9 @@
   "files": [
     "**/*.js"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "code-style": "eslint '**/*.js'",
     "test-run": "mocha ./lib --recursive",

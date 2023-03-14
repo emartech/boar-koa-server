@@ -12,7 +12,8 @@
     "code-style": "eslint '**/*.js'",
     "test-run": "mocha ./lib --recursive",
     "audit": "npm audit",
-    "test": "npm run test-run && npm run audit && npm run code-style"
+    "test": "npm run test-run && npm run audit && npm run code-style",
+    "release": "CI=true semantic-release"
   },
   "repository": {
     "type": "git",

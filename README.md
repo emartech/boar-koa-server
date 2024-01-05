@@ -25,11 +25,26 @@ put these lines in your server.js
 
 ## Build-in Middlewares
 
-### Cors Support ([koa-cors](https://github.com/evert0n/koa-cors))
+### Cors Support ([@koa/cors](https://www.npmjs.com/package/@koa/cors))
 
 ``` javascript
   app.addCorsSupportMiddleware();
 ```
+
+Allowed settings :
+``` javascript
+  app.addCorsSupportMiddleware({
+    allowOrigin: '*', // `Access-Control-Allow-Origin`, * or a regex to filter allowed origins (for instance /emarsys.(com|net)$/)
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH', // `Access-Control-Allow-Methods`
+  });
+```
+
+**⚠️ WARNING ⚠️** : 
+Not specifying an allowed origin made the middleware always return an `Access-Control-Allow-Origin` header with the value of the origin from the request. This behavior completely disables one of the most crucial elements of browsers - the Same Origin Policy (SOP), this could cause a very serious security threat to the users of this middleware.
+
+Since version `2.0.0`, the package is based `@koa/cors@5.0.0` which
+[disables this behavior](https://www.npmjs.com/package/@koa/cors/v/5.0.0#breaking-change-between-50-and-40).
+It is **highly recommended** to specify a list of allowed origins.
 
 ### Method Override ([koa-methodoverwrite](https://github.com/koa-modules/methodoverride))
 

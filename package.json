@@ -10,7 +10,7 @@
   },
   "scripts": {
     "code-style": "eslint '**/*.js'",
-    "test-run": "mocha ./lib --recursive",
+    "test-run": "mocha ./app ./lib --recursive",
     "audit": "npm audit",
     "test": "npm run test-run && npm run audit --omit=dev && npm run code-style",
     "release": "CI=true semantic-release"
@@ -28,7 +28,7 @@
   "dependencies": {
     "app-root-path": "3.1.0",
     "deep-extend": "0.6.0",
-    "kcors": "2.2.2",
+    "@koa/cors": "5.0.0",
     "koa-bodyparser": "4.4.1",
     "koa-helmet": "7.0.2",
     "koa-methodoverride": "2.0.0",
@@ -47,9 +47,11 @@
     "chai": "4.3.7",
     "eslint": "8.44.0",
     "eslint-config-emarsys": "5.1.0",
+    "koa": "2.5.1",
     "mocha": "10.2.0",
+    "npm": "9.8.0",
     "semantic-release": "21.0.7",
     "sinon": "15.2.0",
-    "npm": "9.8.0"
+    "supertest": "6.3.3"
   }
 }

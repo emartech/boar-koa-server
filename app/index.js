@@ -1,7 +1,7 @@
 'use strict';
 
 let fs = require('fs');
-let cors = require('kcors');
+let cors = require('@koa/cors');
 let methodOverride = require('koa-methodoverride');
 let bodyparser = require('koa-bodyparser');
 let requestId = require('koa-requestid');
@@ -14,9 +14,26 @@ class App {
     this.koaApp = koaApp;
   }
 
-  addCorsSupportMiddleware() {
+  addCorsSupportMiddleware({ allowOrigin, allowMethods } = {
+    allowOrigin: '*',
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+  }) {
+    let origin = '*';
+    if (allowOrigin instanceof RegExp) {
+      origin = function(ctx) {
+        const incoming = ctx.get('Origin');
+        if (incoming.match(allowOrigin)) {
+          return incoming;
+        }
+        // eslint-disable-next-line security/detect-unsafe-regex
+        if (incoming.match(/\/localhost(:\d+)?$/)) {
+          return incoming;
+        }
+      };
+    }
     this.addMiddleware(cors({
-      origin: '*'
+      origin,
+      allowMethods
     }));
   }
 

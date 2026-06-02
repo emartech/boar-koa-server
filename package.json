@@ -25,6 +25,9 @@
     "url": "https://github.com/emartech/boar-koa-server/issues"
   },
   "homepage": "https://github.com/emartech/boar-koa-server",
+  "engines": {
+    "node": ">=20"
+  },
   "dependencies": {
     "@koa/cors": "5.0.0",
     "app-root-path": "3.1.0",
